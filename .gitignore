@@ -1,10 +1,69 @@
-﻿__pycache__/
-*.pyc
-node_modules/
-.env
-*.log
-.vscode/
-dist/
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment (IMPORTANT - exclude these!)
+venv/
+env/
+ENV/
+Activate.ps1
+activate
+activate.bat
+deactivate.bat
+python.exe
+pythonw.exe
+pip.exe
+pip3.exe
+pip3.11.exe
+fastapi.exe
+uvicorn.exe
+_distutils_hack/
+annotated_doc/
+annotated_doc-0.0.4.dist-info/
+annotated_types/
+annotated_types-0.7.0.dist-info/
+anyio/
+extras/
+
+# Node
+node_modules/
+dist/
+.cache/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
-*.exe
+Thumbs.db
+
+# Build artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
