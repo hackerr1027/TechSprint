@@ -1,0 +1,28 @@
+graph TB
+    %% Infrastructure Diagram Generated from Model
+
+    subgraph vpc-main["main-vpc<br/>10.0.0.0/16"]
+        direction TB
+        subgraph subnet-public-1["public-subnet-1<br/>10.0.1.0/24<br/>(public)"]
+            direction TB
+        end
+        style subnet-public-1 fill:#e1f5e1
+        subgraph subnet-private-1["private-subnet-1<br/>10.0.2.0/24<br/>(private)"]
+            direction TB
+            ec2-web-1["🖥️ web-server-1<br/>t2.micro"]
+            rds-main["🗄️ main-database<br/>postgres<br/>db.t3.micro"]
+        end
+        style subnet-private-1 fill:#ffe1e1
+        subgraph subnet-private-2["private-subnet-2<br/>10.0.3.0/24<br/>(private)"]
+            direction TB
+        end
+        style subnet-private-2 fill:#ffe1e1
+    end
+    style vpc-main fill:#e1e8f5,stroke:#333,stroke-width:2px
+
+    lb-main["⚖️ main-load-balancer<br/>Application Load Balancer"]
+    style lb-main fill:#fff4e1,stroke:#333,stroke-width:2px
+
+    %% Relationships
+    lb-main --> ec2-web-1
+    ec2-web-1 -.-> rds-main

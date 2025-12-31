@@ -1,0 +1,8 @@
+⚠️  Found 1 security warning(s):
+
+
+HIGH SEVERITY (1):
+
+  • RDS Databases
+    Issue: Database credentials may be using default/hardcoded values
+    Fix: Use AWS Secrets Manager or Parameter Store for database credentials in production

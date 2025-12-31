@@ -1,0 +1,10 @@
+﻿__pycache__/
+*.pyc
+node_modules/
+.env
+*.log
+.vscode/
+dist/
+build/
+.DS_Store
+*.exe
